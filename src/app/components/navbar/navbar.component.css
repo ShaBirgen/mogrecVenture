@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(136, 218, 136);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  flex-direction: row;
+  border: 2px solid blue;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 20px;
+  font-size: 20px;
+}
+li:hover {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
