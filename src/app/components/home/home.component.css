@@ -1,0 +1,32 @@
+.main {
+  height: 80vh;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 50px;
+  /* color: white; */
+}
+p {
+  /* width: 25vw; */
+  max-width: 800px;
+  display: flex;
+  font-size: 30px;
+  font-style: italic;
+  text-decoration: solid;
+  line-height: 35px;
+  /* color: white; */
+  text-align: center;
+}
+.book {
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  width: 25vw;
+  margin-top: 40px;
+  background-color: rgb(19, 66, 19);
+}
