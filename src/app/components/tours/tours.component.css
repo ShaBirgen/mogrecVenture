@@ -1,7 +1,7 @@
 .special-background {
   background-image: url("../../../assets/pexels-birkaybolushikayesi-19283227.jpg");
   background-size: cover;
-  height: 100vh;
+  height: max-content;
 }
 
 img {
@@ -32,4 +32,31 @@ li {
 li:hover {
   background-color: darkgreen;
   color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  background-color: white;
+  display: flex;
+  margin: 30px;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 20px;
+}
+.cards > img {
+  width: 18vw;
+  margin-left: -5px;
+}
+.cards > p {
+  font-size: 20px;
 }
