@@ -1,0 +1,35 @@
+.special-background {
+  background-image: url("../../../assets/pexels-birkaybolushikayesi-19283227.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+img {
+  width: 150px;
+  margin-left: 50px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 50px;
+  font-size: 20px;
+}
+li {
+  /* border: 2px solid black; */
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: orange;
+  opacity: 70%;
+  font-weight: bold;
+}
+li:hover {
+  background-color: darkgreen;
+  color: white;
+}
