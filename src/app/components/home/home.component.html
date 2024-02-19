@@ -14,38 +14,39 @@
   </div>
 
   <!-- //REVIEWS -->
-   <section aria-label="Newest Photos">
-  <div class="reviews-carousel">
-   
-      <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-      <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+  <h1 style="padding: 20px">REVIEWS</h1>
+  <section aria-label="Newest Photos">
+    <div class="reviews-carousel">
+      <button class="carousel-button prev" (click)="prevSlide()">
+        &#8656;
+      </button>
 
-    <div class="reviews-container">
-      <ul class="slide" data-active >
-        <img src="../../../assets/girl-4376755_1280.jpg" alt="" />
-        <p class="review">Amanda Birgen</p>
-        <p class="review">
-          Mogrec Ventures delivered an exceptional tour experience! The guide
-          was knowledgeable, accommodating, and made the journey enjoyable.
-          Highly recommend for exploring new destinations.
-        </p>
-      </ul>
-      <!-- Repeat for other reviews -->
-      
-<ul class="slide"  >
-        <img src="../../../assets/images.jpg" alt="" />
-        <p class="review">Amanda Birgen</p>
-        <p class="review">
-          Mogrec Ventures delivered an exceptional tour experience! The guide
-          was knowledgeable, accommodating, and made the journey enjoyable.
-          Highly recommend for exploring new destinations.
-        </p>
-      </ul>
+      <button class="carousel-button next" (click)="nextSlide()">
+        &#8658;
+      </button>
 
+      <div class="reviews-container">
+        <ul class="slide" data-active>
+          <img src="../../../assets/girl-4376755_1280.jpg" alt="" />
+          <h1 class="review">Amanda Birgen</h1>
+          <p class="review">
+            Mogrec Ventures delivered an exceptional tour experience! The guide
+            was knowledgeable, accommodating, and made the journey enjoyable.
+            Highly recommend for exploring new destinations.
+          </p>
+        </ul>
+        <!-- Repeat for other reviews -->
+
+        <ul class="slide">
+          <img src="../../../assets/images.jpg" alt="" />
+          <p class="review">Rose Birgen</p>
+          <p class="review">
+            Mogrec Ventures delivered an exceptional tour experience! The guide
+            was knowledgeable, accommodating, and made the journey enjoyable.
+            Highly recommend for exploring new destinations.
+          </p>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>
-
-
-

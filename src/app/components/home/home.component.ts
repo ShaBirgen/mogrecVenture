@@ -27,11 +27,11 @@ export class HomeComponent {
 
   prevSlide() {
     const slides = document.querySelectorAll('.slide');
+    console.log('Clicked');
     this.currentIndex = (this.currentIndex - 1 + slides.length) % slides.length;
     this.showSlide(this.currentIndex);
-    console.log('Clicked');
   }
-
+  
   nextSlide() {
     const slides = document.querySelectorAll('.slide');
     this.currentIndex = (this.currentIndex + 1) % slides.length;

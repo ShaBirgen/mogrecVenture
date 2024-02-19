@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './profile.component.css',
 })
 export class ProfileComponent {
-  link = ('/Frontend/src/app/assets/Mogrec Ventures png-02.png');
+  link = 'Frontend/src/assets/girl-4376755_1280.jpg';
 }

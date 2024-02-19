@@ -1,0 +1,21 @@
+.sidebar {
+  display: flex;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  /* border: 2px solid white; */
+  height: 50vh;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+ul > li {
+  color: white;
+  font-size: 20px;
+  list-style: none;
+  cursor: pointer;
+}

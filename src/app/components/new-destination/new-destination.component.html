@@ -1,21 +1,20 @@
 <div class="main">
   <nav>
     <img src="../../../assets/Mogrec Ventures png-02.png" alt="company" />
-    <h1>Welcome to Mogrec Ventures</h1>
+    <!-- <h1>Welcome to Mogrec Ventures</h1> -->
 
     <div class="list">
       <li routerLink="/tours">Tours</li>
-      <li id="booking">Booking</li>
-      <li id="newDestination">NewDestination</li>
+      <li routerLink="">Home</li>
     </div>
   </nav>
-
 
   <!-- BOOKING A TRIP -->
 
   <div class="Booking">
-    <h2>Book a Tour</h2>
-    <form id="bookingForm" >
+    <form id="bookingForm">
+      <h2>Book a Tour</h2>
+      <br />
       <label for="fullName">Full Name:</label><br />
       <input
         type="text"
@@ -64,5 +63,4 @@
       <input class="submit" type="submit" value="Book Now" />
     </form>
   </div>
-
 </div>

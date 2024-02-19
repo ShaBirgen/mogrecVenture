@@ -53,3 +53,7 @@ input {
   align-items: center;
   justify-content: center;
 }
+.bookingForm > h2 {
+  align-items: center;
+  display: flex;
+}

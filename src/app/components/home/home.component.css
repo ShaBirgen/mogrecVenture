@@ -28,23 +28,11 @@ p {
   flex-direction: column;
   align-items: center;
 }
-.book {
-  height: 40px;
-  font-size: 20px;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  width: 25vw;
-  margin-top: 40px;
-  background-color: rgb(19, 66, 19);
-}
 
 .review {
   color: black;
   font-size: 15px;
 }
-
-/* Your existing CSS code */
 
 .content-wrapper {
   display: flex;
@@ -54,21 +42,20 @@ p {
 }
 
 .main {
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 30px;
   color: white;
 }
 
 p {
   max-width: 800px;
   display: flex;
-  font-size: 25px;
+  font-size: 20px;
   font-style: italic;
   text-decoration: solid;
   line-height: 35px;
@@ -86,18 +73,16 @@ p {
   color: white;
   border-radius: 10px;
   border: none;
-  width: 25vw;
+  width: 20vw;
   margin-top: 40px;
   background-color: rgb(19, 66, 19);
 }
 
 .reviews-container {
   font-size: 20px;
-  /* background-color: white; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -109,6 +94,7 @@ p {
   flex-direction: column;
   align-items: center;
   color: black;
+  width: 40vw;
   font-size: 15px;
   size: 10px;
   background-color: white;
@@ -116,7 +102,6 @@ p {
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
   border-radius: 20px;
-  border: 2px solid salmon;
 }
 
 .slide > img {
@@ -127,7 +112,7 @@ p {
 .slide[data-active] {
   opacity: 1;
   z-index: 1;
-  transition-delay: 0ms;
+  transition-delay: 1s;
 }
 
 .carousel-button {
@@ -136,7 +121,7 @@ p {
   background: none;
   border: none;
   font-size: 4rem;
-  top: 130%;
+  top: 140%;
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
