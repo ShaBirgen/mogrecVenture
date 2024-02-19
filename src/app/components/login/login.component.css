@@ -9,9 +9,9 @@ form {
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  width: 30vw;
+  /* width: 30vw; */
   background-color: white;
-  margin-left: 600px;
+  /* margin-left: 600px; */
   margin-top: 100px;
   gap: 20px;
   font-size: 20px;
@@ -30,24 +30,12 @@ label {
   font-size: 20px;
   font-weight: bold;
 }
-.submit {
-  padding: 15px;
-  width: 50%;
-  background-color: wheat;
-  font-size: 20px;
-  text-align: center;
-  font-weight: bold;
-  color: black;
-  border-radius: 5px;
-  width: 8vw;
-}
-.submit:hover {
-  background-color: grey;
-  color: white;
-}
+
 .submit > button {
   border: none;
   font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
   background-color: wheat;
 }
 .submit > button:hover {

@@ -7,7 +7,6 @@
 .main {
   height: 80vh;
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
 }
@@ -39,24 +38,10 @@ p {
   margin-top: 40px;
   background-color: rgb(19, 66, 19);
 }
-.reviews {
-  font-size: 20px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 400px;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-}
+
 .review {
   color: black;
   font-size: 15px;
-}
-.reviews > img {
-  width: 100px;
-  border-radius: 50%;
 }
 
 /* Your existing CSS code */
@@ -106,9 +91,9 @@ p {
   background-color: rgb(19, 66, 19);
 }
 
-.reviews {
+.reviews-container {
   font-size: 20px;
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,65 +103,62 @@ p {
   border-radius: 10px;
 }
 
-.review {
+.slide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   color: black;
   font-size: 15px;
+  size: 10px;
+  background-color: white;
+  position: absolute;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  border-radius: 20px;
+  border: 2px solid salmon;
 }
 
-.reviews > img {
-  width: 100px;
+.slide > img {
+  width: 10vw;
   border-radius: 50%;
 }
 
-/* Your existing CSS code */
-
-.reviews-carousel {
-  position: relative;
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
 }
 
-.reviews-container {
-  display: flex;
-  overflow: hidden;
-}
-
-.reviews {
-  flex: 0 0 auto;
-  width: 300px; /* Adjust width as needed */
-  height: max-content;
-  background-color: #f0f0f0;
-  margin: 10px;
-  padding: 20px;
-  border-radius: 10px;
+.carousel-button {
   position: absolute;
-  transition: transform 0.5s ease; /* Add smooth transition effect */
-}
-
-input[type="radio"] {
-  display: none; /* Hide the radio buttons */
-}
-
-input[type="radio"]:checked ~ .reviews-container .reviews {
-  transform: translateX(-100%); /* Adjust the amount of sliding */
-}
-
-.prev-btn,
-.next-btn {
-  position: absolute;
-  top: 50%;
-  background-color: transparent;
+  z-index: 2;
+  background: none;
   border: none;
-  outline: none;
+  font-size: 4rem;
+  top: 130%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  font-size: 24px;
-  align-items: center;
-  color: #000; /* Adjust button color */
-  background-color: white;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.prev-btn {
-  left: 10px;
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.next-btn {
-  right: 200px;
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 12rem;
+}
+
+.carousel-button.next {
+  right: 12rem;
 }
