@@ -1,15 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+
 
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background-image: url("../src/assets/pexels-chavdar-lungov-3996362.jpg");
+  background-image: url("../src/assets/wild-animals-7868756_1280.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

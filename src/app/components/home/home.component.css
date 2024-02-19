@@ -1,3 +1,9 @@
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .main {
   height: 80vh;
   display: flex;
@@ -7,18 +13,21 @@
 }
 h1 {
   font-size: 50px;
-  /* color: white; */
+  color: white;
 }
 p {
-  /* width: 25vw; */
   max-width: 800px;
   display: flex;
-  font-size: 30px;
+  font-size: 25px;
   font-style: italic;
   text-decoration: solid;
   line-height: 35px;
-  /* color: white; */
+  color: white;
   text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 .book {
   height: 40px;
@@ -29,4 +38,145 @@ p {
   width: 25vw;
   margin-top: 40px;
   background-color: rgb(19, 66, 19);
+}
+.reviews {
+  font-size: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.review {
+  color: black;
+  font-size: 15px;
+}
+.reviews > img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Your existing CSS code */
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
+}
+
+p {
+  max-width: 800px;
+  display: flex;
+  font-size: 25px;
+  font-style: italic;
+  text-decoration: solid;
+  line-height: 35px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book {
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  width: 25vw;
+  margin-top: 40px;
+  background-color: rgb(19, 66, 19);
+}
+
+.reviews {
+  font-size: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.review {
+  color: black;
+  font-size: 15px;
+}
+
+.reviews > img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Your existing CSS code */
+
+.reviews-carousel {
+  position: relative;
+}
+
+.reviews-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.reviews {
+  flex: 0 0 auto;
+  width: 300px; /* Adjust width as needed */
+  height: max-content;
+  background-color: #f0f0f0;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  transition: transform 0.5s ease; /* Add smooth transition effect */
+}
+
+input[type="radio"] {
+  display: none; /* Hide the radio buttons */
+}
+
+input[type="radio"]:checked ~ .reviews-container .reviews {
+  transform: translateX(-100%); /* Adjust the amount of sliding */
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  align-items: center;
+  color: #000; /* Adjust button color */
+  background-color: white;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 200px;
 }

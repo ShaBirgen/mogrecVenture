@@ -15,11 +15,18 @@ nav {
   font-size: 20px;
 }
 li {
-  background-color: orange;
+  /* background-color: rgb(19, 66, 19); */
+  /* border: 2px solid white; */
   padding: 10px;
   font-size: 25px;
   border-radius: 10px;
   cursor: pointer;
+  color: white;
+}
+li:hover {
+  text-decoration-line: underline;
+  border: none;
+  /* background-color: white; */
 }
 nav > img {
   width: 15%;

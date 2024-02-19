@@ -1,8 +1,4 @@
-.special-background {
-  background-image: url("../../../assets/pexels-birkaybolushikayesi-19283227.jpg");
-  background-size: cover;
-  height: max-content;
-}
+
 
 img {
   width: 150px;
@@ -37,9 +33,11 @@ li:hover {
   display: flex;
   justify-content: center;
   color: green;
-  font-size: 30px;
+  font-size: 25px;
   font-style: italic;
-  margin: 30px;
+  margin-left: 170px;
+  margin-right: 170px;
+  margin-bottom: 40px;
   padding: 10px;
   background-color: orange;
 }
@@ -101,5 +99,5 @@ li:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
 }
