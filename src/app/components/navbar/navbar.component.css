@@ -14,9 +14,11 @@ nav {
   gap: 50px;
   font-size: 20px;
 }
-li:hover {
-  color: green;
+li {
+  background-color: orange;
+  padding: 10px;
   font-size: 25px;
+  border-radius: 10px;
   cursor: pointer;
 }
 nav > img {

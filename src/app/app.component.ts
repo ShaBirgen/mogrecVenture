@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { ToursComponent } from './components/tours/tours.component';
+import { NewDestinationComponent } from './components/new-destination/new-destination.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,7 @@ import { ToursComponent } from './components/tours/tours.component';
     NavbarComponent,
     ProfileComponent,
     HomeComponent,
-    ToursComponent,
+    ToursComponent, NewDestinationComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

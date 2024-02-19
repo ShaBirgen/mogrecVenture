@@ -1,1 +1,117 @@
-<p>new-destination works!</p>
+<div class="main">
+  <nav>
+    <img src="../../../assets/Mogrec Ventures png-02.png" alt="company" />
+    <h1>Welcome to Mogrec Ventures</h1>
+
+    <div class="list">
+      <li routerLink="/tours">Tours</li>
+      <li id="booking">Booking</li>
+      <li id="newDestination">NewDestination</li>
+    </div>
+  </nav>
+
+  <div class="events">
+    <form id="tourForm" >
+      <label for="destination">Destination:</label><br />
+      <input
+        type="text"
+        id="destination"
+        name="destination"
+        placeholder="Enter destination"
+        required
+      /><br /><br />
+
+      <label for="duration">Duration:</label><br />
+      <input
+        type="text"
+        id="duration"
+        name="duration"
+        placeholder="Enter duration in days"
+        required
+      /><br /><br />
+
+      <label for="image">Image URL:</label> <br />
+      <input
+        type="text"
+        id="image"
+        name="image"
+        placeholder="Enter image URL"
+        required
+      /><br /><br />
+
+      <label for="price">Price:</label> <br />
+      <input
+        type="number"
+        id="price"
+        name="price"
+        placeholder="Enter price in Kshs"
+        required
+      /><br /><br />
+
+      <label for="tourType">Tour Type:</label><br />
+      <select id="tourType" name="tourType" required>
+        <option value="" disabled selected>Select tour type</option>
+        <option value="hikes">Hikes</option>
+        <option value="cultural_excursions">Cultural Excursions</option>
+        <option value="weekend_gateways">Weekend Gateways</option></select
+      ><br /><br />
+
+      <input class="submit" type="submit" value="Submit" />
+    </form>
+  </div>
+
+  <!-- BOOKING A TRIP -->
+
+  <div class="Booking">
+    <h2>Book a Tour</h2>
+    <form id="bookingForm" >
+      <label for="fullName">Full Name:</label><br />
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        placeholder="Enter your full name"
+        required
+      /><br /><br />
+
+      <label for="trip">Trip:</label> <br />
+      <input
+        type="text"
+        id="trip"
+        name="trip"
+        placeholder="Enter trip name"
+        required
+      /><br /><br />
+
+      <label for="contactInfo">Contact Information:</label> <br />
+      <input
+        type="tel"
+        id="contactInfo"
+        name="contactInfo"
+        placeholder="Enter contact information"
+        required
+      />
+      <br />
+      <br />
+
+      <label for="email">Email Address:</label> <br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+      /><br /><br />
+
+      <label for="paymentMethod">Mode of Payment:</label> <br />
+      <select id="paymentMethod" name="paymentMethod" required>
+        <option value="" disabled selected>Select payment method</option>
+        <option value="visa">Visa</option>
+        <option value="mpesa">M-Pesa</option>
+        <option value="bank_transfer">Bank Transfer</option></select
+      ><br /><br />
+      <input class="submit" type="submit" value="Book Now" />
+    </form>
+  </div>
+
+</div>
