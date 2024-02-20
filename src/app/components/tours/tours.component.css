@@ -4,14 +4,17 @@
   height: max-content;
 } */
 
-img {
+.image > img {
   width: 150px;
-  margin-left: 50px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 50%;
 }
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  padding-top: 20px;
 }
 .list {
   list-style: none;
@@ -25,25 +28,25 @@ li {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  background-color: orange;
+  color: white;
   opacity: 70%;
-  font-weight: bold;
 }
 li:hover {
-  background-color: darkgreen;
+  background-color: rgb(19, 66, 19);
   color: white;
+  text-decoration: underline;
 }
 .hike {
   display: flex;
   justify-content: center;
-  color: green;
+  color: rgb(19, 66, 19);
   font-size: 25px;
   font-style: italic;
   margin-left: 170px;
   margin-right: 170px;
   margin-bottom: 40px;
   padding: 10px;
-  background-color: orange;
+  background-color: rgba(255, 165, 0, 0.7);
 }
 .hikes {
   display: flex;
@@ -76,16 +79,18 @@ li:hover {
 }
 .cards > img {
   width: 18vw;
-  margin-left: -5px;
 }
 .cards > p {
-  font-size: 20px;
+  font-size: 15px;
+  line-height: 24px;
 }
-
+.cards > h1 {
+  color: rgb(19, 66, 19);
+}
 .cards > button {
   padding: 10px;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 18px;
   background-color: orange;
   border: none;
   font-style: bold;

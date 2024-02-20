@@ -10,32 +10,14 @@
   align-items: center;
 }
 h1 {
-  font-size: 50px;
-  color: white;
-}
-p {
-  max-width: 800px;
-  display: flex;
-  font-size: 25px;
+  font-size: 40px;
   font-style: italic;
-  text-decoration: solid;
-  line-height: 35px;
   color: white;
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  flex-direction: column;
-  align-items: center;
 }
 
 .review {
   color: black;
-  font-size: 15px;
-}
-
-h1 {
-  font-size: 30px;
-  color: white;
+  font-size: 20px;
 }
 
 p {
@@ -54,12 +36,11 @@ p {
 }
 
 .book {
-  height: 40px;
+  padding: 15px;
   font-size: 20px;
   color: white;
   border-radius: 10px;
   border: none;
-  width: 20vw;
   margin-top: 40px;
   background-color: rgb(19, 66, 19);
 }
@@ -70,7 +51,7 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin: 50px;
+  /* margin: 50px; */
   border-radius: 10px;
 }
 .tours {
@@ -84,18 +65,28 @@ p {
 .cards {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  width: 30vw;
   padding: 20px;
-  border: 2px solid black;
   background-color: white;
   border-radius: 20px;
   border: none;
+  height: max-content;
 }
-
+.cards > h1 {
+  color: black;
+}
+.cards:hover {
+  background-color: rgb(19, 66, 19);
+  color: white;
+  p,
+  h1 {
+    color: white;
+  }
+}
 .cards > img {
   width: 320px;
-  height: 30vh;
+  height: 250px;
 }
 .cards > p {
   color: black;
@@ -122,13 +113,12 @@ p {
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
   border-radius: 20px;
-  height: 50vh;
-  padding-top: 10px;
+  padding: 20px;
 }
 
 .slide > img {
-  width: 15vw;
-  height: 20vh;
+  width: 120px;
+  height: 100px;
   border-radius: 50%;
 }
 
@@ -144,8 +134,8 @@ p {
   background: none;
   border: none;
   font-size: 4rem;
-  top: 210%;
-  transform: translateY(-50%);
+  top: 205%;
+  /* transform: translateY(-50%); */
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   border-radius: 0.25rem;
