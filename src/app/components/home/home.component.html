@@ -13,18 +13,62 @@
     </p>
   </div>
 
+  
+  <div class="tours">
+    <div class="cards">
+      <h1>KILIMANJARO</h1>
+      <img src="../../../assets/pexels-antony-trivet-13245698.jpg" alt="" />
+      <p>
+        Majestic Kilimanjaro, Africa's highest peak, offers awe-inspiring
+        vistas, diverse ecosystems, and a challenge for adventurous souls.
+        Conquer its heights, immerse in its beauty, and create unforgettable
+        memories.
+      </p>
+      <button routerLink="/newDestination">BOOK NOW</button>
+    </div>
+
+    <div class="cards">
+      <h1>SAMBURU</h1>
+      <img
+      class="samburu"
+        src="../../../assets/warrior-4371555_1280.jpg"
+        alt=""
+      />
+      <p>
+        Experience their vibrant traditions, intricate beadwork, captivating
+        dances, and deep connection to the land. Engage in homestays, learn
+        about traditional medicine, and savor authentic cuisine for an immersive
+        cultural journey."
+      </p>
+      <button>BOOK NOW</button>
+    </div>
+
+    <div class="cards">
+      <h1>NANYUKI</h1>
+      <img class="Nanyuki" src="../../../assets/images.jpg" alt="" />
+      <p>
+        "Nanyuki, a gateway to Mount Kenya and wildlife reserves. Experience
+        adventure sports, vibrant markets, and cultural diversity. Enjoy scenic
+        beauty, luxury lodges, and warm hospitality in this charming town."
+      </p>
+      <button>BOOK NOW</button>
+    </div>
+  </div>
+
+
+
   <!-- //REVIEWS -->
-  <h1 style="padding: 20px">REVIEWS</h1>
-  <section aria-label="Newest Photos">
+  <section aria-label="Review Cards">
     <div class="reviews-carousel">
       <button class="carousel-button prev" (click)="prevSlide()">
         &#8656;
       </button>
-
+      
       <button class="carousel-button next" (click)="nextSlide()">
         &#8658;
       </button>
-
+      
+      <h1 style="padding: 20px">REVIEWS</h1>
       <div class="reviews-container">
         <ul class="slide" data-active>
           <img src="../../../assets/girl-4376755_1280.jpg" alt="" />
@@ -39,7 +83,7 @@
 
         <ul class="slide">
           <img src="../../../assets/images.jpg" alt="" />
-          <p class="review">Rose Birgen</p>
+          <h1 class="review">Rose Birgen</h1>
           <p class="review">
             Mogrec Ventures delivered an exceptional tour experience! The guide
             was knowledgeable, accommodating, and made the journey enjoyable.
@@ -49,4 +93,28 @@
       </div>
     </div>
   </section>
+
+
 </div>
+<app-footer> </app-footer>
+<!-- <section aria-label="Gallery">
+  <div class="gallery">
+    <button class="gallery-button prev" (click)="backSlide()">&#8656;</button>
+
+    <button class="gallery-button next" (click)="forwardSlide()">&#8658;</button>
+
+    <ul data-slides>
+      <li class="gallery.data" data-active>
+        <img src="../../../assets/mogrec/IMG_1964.jpg" alt="Camp #1" />
+      </li>
+      <li class="slides">
+        <img src="../../../assets/mogrec/IMG_2095.jpg" alt="Camp #2" />
+      </li>
+      <li class="slides">
+        <img src="../../../assets/mogrec/IMG_2160.jpg" alt="Camp #3" />
+      </li>
+    </ul>
+  </div>
+</section> -->
+
+

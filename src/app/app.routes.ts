@@ -7,6 +7,8 @@ import { NewDestinationComponent } from './components/new-destination/new-destin
 import { AdminComponent } from './components/admin/admin.component';
 import { AdminSidebarComponent } from './components/admin-sidebar/admin-sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { WildcardComponent } from './components/wildcard/wildcard.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,4 +19,6 @@ export const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'admin-sidebar', component: AdminSidebarComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: '**', component: WildcardComponent },
 ];
