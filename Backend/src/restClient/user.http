@@ -1,0 +1,15 @@
+
+###
+
+GET http://localhost:3000/api/users/allUsers
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:3000/api/users/getProfile
+Content-Type: application/json
+
+
+###
+DELETE   http://localhost:3000/api/users/deleteUser:2
