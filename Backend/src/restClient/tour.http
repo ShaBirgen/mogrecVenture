@@ -1,0 +1,10 @@
+POST http://localhost:3000/api/tours/createTour
+Content-Type: application/json
+
+{
+  "Destination": "Kampala",
+  "Tour_type": "Cultural Excursions",
+  "Duration": "4 Days",
+  "Price": "Kshs 10,000",
+  "Image": "https://i.pinimg.com/564x/ef/ed/4b/efed4b90925ce731a690449c89f221aa.jpg"
+}

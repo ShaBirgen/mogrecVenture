@@ -8,6 +8,7 @@ export const authenticateUser = async (
   next: NextFunction
 ): Promise<void> => {
   // Implement middleware to authenticate user using JWT
+  
 };
 
 export const authorizeAdmin = async (

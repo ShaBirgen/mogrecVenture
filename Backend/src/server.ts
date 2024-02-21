@@ -1,19 +1,18 @@
-import express from 'express'
+import express, { json } from 'express'
 import router from './Routes/auth.routes';
 import userRoutes from './Routes/user.routes';
+import tourroutes from './Routes/tour.routes';
 // import sql from "mssql";
 // import config from "./config/config";
 // import authRoutes from "./routes/authRoutes";
-// import tourRoutes from "./routes/tourRoutes";
 // import cors from "cors";
 
 const app = express();
-
-app.use(express.json());
+app.use(json())
 // app.use(cors());
 app.use("/api/auth", router )
 app.use("/api/users", userRoutes);
-// app.use("/api/tours", tourRoutes);
+app.use("/api/tours", tourroutes);
 
 // sql
 //   .connect(config.mssqlDBConfig)
