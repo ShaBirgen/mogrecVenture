@@ -86,7 +86,7 @@ export const deleteUser = async (req: Request,res: Response)=> {
              .input("id", mssql.VarChar, id)
              .execute("deleteUser")
          ).recordset;
-
+          
          return res.status(200).json({
            deleted: "Account has been deleted successfully",
            result,

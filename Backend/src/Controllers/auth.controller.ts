@@ -3,8 +3,10 @@ import { Request, Response } from "express";
 import { mssqlDBConfig } from "../Config/config";
 import { generateToken } from "../Utils/jwtUtils";
 import { v4  } from "uuid";
+import bcrypt from 'bcrypt'
 
 interface UserData {
+  id: string;
   fullName: string;
   email: string;
   phoneNumber: string;
@@ -14,9 +16,16 @@ interface UserData {
 export const registerUser = async (req: Request, res: Response) => {
   // Get user data from request body
   const userData: UserData = req.body;
+  const hash_pwd = await bcrypt.hash(userData.password, 5);
+  // console.log(hash_pwd);
+  
 
   try {
-     const userId = v4();
+     const id = v4();
+     console.log(
+      "id", id
+     );
+     
 
      // Connect to SQL Server
      const pool = await mssql.connect(mssqlDBConfig);
@@ -27,11 +36,11 @@ export const registerUser = async (req: Request, res: Response) => {
       await pool.query`SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'users'`;
     if (tableExists.recordset.length === 0) {
       // Create users table if it doesn't exist
-      await pool.query`CREATE TABLE users (Id INT IDENTITY(1,1) PRIMARY KEY, fullName VARCHAR(255), email VARCHAR(255), phoneNumber VARCHAR(255), password VARCHAR(255))`;
+      await pool.query`CREATE TABLE users (id VARCHAR(40) PRIMARY KEY, fullName VARCHAR(255), email VARCHAR(255), phoneNumber VARCHAR(255), password VARCHAR(255))`;
     }
 
     // Insert user data into the users table
-    await pool.query`INSERT INTO users (fullName, email, phoneNumber, password) VALUES (${userData.fullName}, ${userData.email}, ${userData.phoneNumber}, ${userData.password})`;
+    await pool.query`INSERT INTO users (id, fullName, email, phoneNumber, password) VALUES (${id},${userData.fullName}, ${userData.email}, ${userData.phoneNumber}, ${hash_pwd})`;
 
     // Send a success response
     res
@@ -62,7 +71,7 @@ export const loginUser = async (req: any, res: any) => {
 console.log(token);
 
       // Send a success response with the JWT token
-      res.status(200).json({ success: true, message: "Login successful",token });
+      res.status(200).json({ success: true, message: "Login successful" });
     } else {
       // User not found or credentials are incorrect, send an error response
       res
