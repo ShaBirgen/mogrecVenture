@@ -10,25 +10,23 @@ export const getUserProfile = async (
   res: Response
 ): Promise<void> => {
   // Implement logic to fetch user profile
+  const id = req.params.id; 
 
  try {
-   // Extract user ID from request
-   const Id = req.params.Id; // Assuming the user ID is passed as a route parameter
 
    // Connect to SQL Server
    const pool = await mssql.connect(mssqlDBConfig);
-
-   // Execute a SQL query to fetch the user's profile based on the user ID
-   const result = await pool
+   const result = (await pool
      .request()
-     .input("Id", mssql.Int, Id) // Assuming userId is an integer
-     .query("SELECT * FROM Users WHERE Id = @Id");
-
+     .input("id", mssql.VarChar(40), id) // Assuming userId is an integer
+     .query(`SELECT * FROM Users WHERE id = '${id}'`)).recordset;
+      console.log(result);
+      
    // Check if a user with the provided ID exists
-   if (result.recordset.length === 1) {
+   const user = result[0];
+   if (id) {
      // User found, return the user's profile
-     const userProfile = result.recordset[0];
-     res.status(200).json({ userProfile });
+     res.status(200).json({user});
    } else {
      // User not found, return an error response
      res.status(404).json({ message: "User not found" });

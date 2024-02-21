@@ -6,9 +6,9 @@ import {getAllTours,getTourById,createTour,updateTour,deleteTour} from "../Contr
 const tourroutes = Router();
 
 tourroutes.get("/allTours", getAllTours);
-tourroutes.get("/tourId", getTourById);
+tourroutes.get("/tourId/:id", getTourById);
 tourroutes.post("/createTour", createTour);
-tourroutes.put("/updateTour", updateTour);
-tourroutes.delete("/deleteTour", deleteTour);
+tourroutes.put("/updateTour/:id", updateTour);
+tourroutes.delete("/deleteTour/:id", deleteTour);
 
 export default tourroutes;
