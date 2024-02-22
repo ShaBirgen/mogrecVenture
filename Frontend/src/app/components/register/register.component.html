@@ -1,38 +1,39 @@
 <!-- <p>register works!</p> -->
 <app-navbar> </app-navbar>
 
+<!-- register.component.html -->
 <section>
   <div class="register">
-    <form action="form" class="form">
+    <form class="form" (ngSubmit)="registerUser(registerForm.value)" #registerForm="ngForm">
       <!-- FULL NAME -->
       <h1>Register</h1>
       <div class="input-div">
-        <label for="fullname">Full name :</label> <br />
-        <input type="text" />
+        <label for="fullName">Full name :</label> <br />
+        <input type="text" name="fullName" ngModel required />
       </div>
-
+    
       <!-- EMAIL ADDRESS  -->
       <div class="input-div">
         <label for="email">Email :</label> <br />
-        <input type="email" />
+        <input type="email" name="email" ngModel required />
       </div>
-
+    
       <!-- PHONE NUMBER -->
       <div class="input-div">
-        <label for="phone-number">Phone Number :</label> <br />
-        <input type="text" />
+        <label for="phoneNumber">Phone Number :</label> <br />
+        <input type="text" name="phoneNumber" ngModel required />
       </div>
-
+    
       <!-- PASSWORD -->
       <div class="input-div">
         <label for="password">Password :</label> <br />
-        <input type="password" />
+        <input type="password" name="password" ngModel required />
       </div>
-
+    
       <!-- SUBMIT -->
-      <!-- <div class="submit"> -->
-        <input type="submit"  class="submit" value="Create Account" />
-      <!-- </div> -->
+      <button type="submit" class="submit">Create Account</button>
     </form>
+    
   </div>
 </section>
+

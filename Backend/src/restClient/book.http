@@ -1,0 +1,11 @@
+
+
+POST  http://localhost:3000/api/book/booktour
+Content-Type: application/json
+
+{
+  "Full_Name": "Amanda Chepkoech ",
+  "Trip": "Mombasa",
+  "Email": "amandabirgen9@gmail.com"
+
+}

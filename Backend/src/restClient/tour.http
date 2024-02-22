@@ -11,7 +11,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/api/tours/tourId/60d96911-e7c8-4ebd-9679-bdc39935651d
+GET http://localhost:3000/api/tours/tourId/ee76d50d-ee4a-4f15-8cbf-f740fdd8b483
 Content-Type: application/json
 
 ###

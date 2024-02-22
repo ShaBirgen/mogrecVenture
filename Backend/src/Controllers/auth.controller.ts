@@ -71,7 +71,7 @@ export const loginUser = async (req: any, res: any) => {
 console.log(token);
 
       // Send a success response with the JWT token
-      res.status(200).json({ success: true, message: "Login successful" });
+      res.status(200).json({ success: true, message: "Login successful", token });
     } else {
       // User not found or credentials are incorrect, send an error response
       res
