@@ -3,9 +3,9 @@ Content-Type: application/json
 
 {
   
-  "fullName": "Kenedy Maina",
-  "email": "mario@google.com",
-  "phoneNumber": "0708530896",
+  "fullName": "Yoshi",
+  "email": "yoshi@google.com",
+  "phoneNumber": "0712345678",
   "password": "test12"
 }
 
@@ -15,7 +15,7 @@ POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "kennynet66@gmail.com",
+  "email": "yoshi@google.com",
   "password": "test12"
 }
 

@@ -46,7 +46,7 @@ export class RegisterComponent {
         if (response.success) {
           // Registration successful, redirect to login
           this.router.navigate(['/']);
-          alert('Registered Successfully');
+          alert(response.message);
           this.messageService.add({
             severity: 'success',
             summary: 'Success',

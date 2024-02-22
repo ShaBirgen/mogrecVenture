@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { MessageService } from 'primeng/api';
+import { catchError, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-tours',
@@ -9,14 +12,39 @@ import { RouterLink } from '@angular/router';
   templateUrl: './tours.component.html',
   styleUrl: './tours.component.css',
 })
-export class ToursComponent {
-  condition: boolean = false;
 
-  toggleBackground(): void {
-    this.condition = !this.condition;
-    
-  }
+
+export class ToursComponent {
   
-  // condition =
-  //   'background-image: url(../../../assets/pexels-alessio-cesario-1906879.jpg);';
+  
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private messageService: MessageService
+    ) {
+      interface Tours{
+        tour_id: string;
+        Destination: string,
+        Tour_type: string,
+        Duration: string,
+        Price: string,
+        Image: string,
+      }
+    }
+    myTours:Tours[]=[]
+    getAllTours(){
+      interface Tour{
+        Tour: Tour[]
+      }
+      
+  
+    
+      this.http.get<Tour>('http://localhost:3000/api/tours/allTours')
+      .subscribe((response) => {
+        console.log(response.Tour); // Handle successful registration response
+     
+      });
+  }
 }
+
+

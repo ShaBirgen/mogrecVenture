@@ -14,7 +14,8 @@ export const createBooking = async (req:Request, res:Response): Promise<any> => 
   try {
     const booking:Booking = req.body;
     const pool = await mssql.connect(mssqlDBConfig);
-
+    console.log(booking);
+    
     // Add error event handler to the pool
     pool.on("error", (err) => {
       console.error("SQL Pool Error:", err);
@@ -31,12 +32,15 @@ export const createBooking = async (req:Request, res:Response): Promise<any> => 
     // Execute the query
     const result = (await request.query(
       `INSERT INTO Bookings (Full_Name, Trip, Email)
-       VALUES ('${booking.Email}', '${booking.Trip}', '${booking.Email}')`
+       VALUES ('${booking.Full_Name}', '${booking.Trip}', '${booking.Email}')`
     )).rowsAffected;
 
     console.log(result); // Logging the result to check
 
-    return result;
+    return res.status(200).json ({
+      success :"You have successfully booked a tour"
+      
+    });
   } catch (err) {
     console.error("Error creating booking:", err);
     throw err;

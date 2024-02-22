@@ -2,12 +2,22 @@
 import sql from "mssql";
 import { mssqlDBConfig } from "../Config/config";
 
-interface Tour {
+export interface Tour {
+  
   getAllTours(): Promise<any[]>;
   // Add other tour-related methods as needed
 }
 
-const Tour: Tour = {
+export interface Tours{
+  tour_id: string;
+  Destination: string,
+  Tour_type: string,
+  Duration: string,
+  Price: string,
+  Image: string,
+}
+
+export const Tour: Tour = {
   async getAllTours() {
     try {
       const pool = await sql.connect(mssqlDBConfig);

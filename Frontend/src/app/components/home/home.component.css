@@ -59,7 +59,7 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   margin-top: 50px;
 }
 .cards {
@@ -67,7 +67,8 @@ p {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: white;
   border-radius: 20px;
   border: none;
@@ -83,6 +84,9 @@ p {
   h1 {
     color: white;
   }
+  button {
+    border: 1px solid white;
+  }
 }
 .cards > img {
   width: 320px;
@@ -90,6 +94,7 @@ p {
 }
 .cards > p {
   color: black;
+  font-size: 18px;
 }
 .cards > button {
   padding: 10px;

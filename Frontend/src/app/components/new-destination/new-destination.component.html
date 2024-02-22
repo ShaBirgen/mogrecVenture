@@ -12,55 +12,50 @@
   <!-- BOOKING A TRIP -->
 
   <div class="Booking">
-    <form id="bookingForm">
+    <form class="form" (ngSubmit)="Booking(bookingForm.value)"  #bookingForm ="ngForm">
       <h2>Book a Tour</h2>
       <br />
       <label for="fullName">Full Name:</label><br />
       <input
         type="text"
-        id="fullName"
-        name="fullName"
-        placeholder="Enter your full name"
+        id="Full_Name"
+        name="Full_Name"
+        placeholder="Enter your full name" ngModel
         required
       /><br /><br />
 
       <label for="trip">Trip:</label> <br />
       <input
         type="text"
-        id="trip"
-        name="trip"
-        placeholder="Enter trip name"
+        id="Trip"
+        name="Trip"
+        placeholder="Enter trip name" ngModel
         required
       /><br /><br />
 
-      <label for="contactInfo">Contact Information:</label> <br />
+      <!-- <label for="contactInfo">Contact Information:</label> <br />
       <input
         type="tel"
         id="contactInfo"
         name="contactInfo"
-        placeholder="Enter contact information"
+        placeholder="Enter contact information" ngModel
         required
       />
       <br />
-      <br />
+      <br /> -->
 
       <label for="email">Email Address:</label> <br />
       <input
         type="email"
-        id="email"
-        name="email"
-        placeholder="Enter your email address"
+        id="Email"
+        name="Email"
+        placeholder="Enter your email address" ngModel
         required
       /><br /><br />
 
-      <label for="paymentMethod">Mode of Payment:</label> <br />
-      <select id="paymentMethod" name="paymentMethod" required>
-        <option value="" disabled selected>Select payment method</option>
-        <option value="visa">Visa</option>
-        <option value="mpesa">M-Pesa</option>
-        <option value="bank_transfer">Bank Transfer</option></select
-      ><br /><br />
-      <input class="submit" type="submit" value="Book Now" />
+      
+  
+      <button type="submit" class="submit" > Book Now</button> 
     </form>
   </div>
 </div>

@@ -13,4 +13,4 @@ Content-Type: application/json
 
 ###
 //DELETE USER PROFILE
-DELETE   http://localhost:3000/api/users/deleteUser/e6618f09-be7e-41d3-a3d5-da96fcb0f484
+DELETE   http://localhost:3000/api/users/deleteUser/75bd856c-c4e3-4c1f-83b8-65d7e6ed30e2

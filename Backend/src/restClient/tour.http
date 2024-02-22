@@ -1,3 +1,5 @@
+
+//CREATE TOUR
 POST http://localhost:3000/api/tours/createTour
 Content-Type: application/json
 
@@ -10,20 +12,23 @@ Content-Type: application/json
 }
 
 ###
-
-GET http://localhost:3000/api/tours/tourId/ee76d50d-ee4a-4f15-8cbf-f740fdd8b483
+//GET TOUR BY ID
+GET http://localhost:3000/api/tours/tourId/1bfd1232-c5bc-4d6e-a473-56685fc8b289
 Content-Type: application/json
 
 ###
+
+//GET ALL TOURS
 GET http://localhost:3000/api/tours/allTours
 Content-Type: application/json
 
 ###
-DELETE  http://localhost:3000/api/tours/deleteTour/60d96911-e7c8-4ebd-9679-bdc39935651d
+//DELETE TOURS
+DELETE  http://localhost:3000/api/tours/deleteTour/b791aab2-22f7-4efd-ae5b-2957d0f083bd
 Content-Type: application/json
 
 ###
-
+//UPDATE TOUR
 PUT http://localhost:3000/api/tours/updateTour/d8ea3307-8971-499b-b0ca-e5b7442996e4
 Content-Type: application/json
 
@@ -35,3 +40,4 @@ Content-Type: application/json
   "Image": "https://i.pinimg.com/564x/ef/ed/4b/efed4b90925ce731a690449c89f221aa.jpg"
 
 }
+

@@ -2,8 +2,8 @@ import mssql from "mssql";
 import { Request, Response } from "express";
 import { mssqlDBConfig } from "../Config/config";
 import { generateToken } from "../Utils/jwtUtils";
-import { v4  } from "uuid";
-import bcrypt from 'bcrypt'
+import { v4 } from "uuid";
+import bcrypt from "bcrypt";
 
 interface UserData {
   id: string;
@@ -18,18 +18,13 @@ export const registerUser = async (req: Request, res: Response) => {
   const userData: UserData = req.body;
   const hash_pwd = await bcrypt.hash(userData.password, 5);
   // console.log(hash_pwd);
-  
 
   try {
-     const id = v4();
-     console.log(
-      "id", id
-     );
-     
+    const id = v4();
+    console.log("id", id);
 
-     // Connect to SQL Server
-     const pool = await mssql.connect(mssqlDBConfig);
-
+    // Connect to SQL Server
+    const pool = await mssql.connect(mssqlDBConfig);
 
     // Check if the users table exists, if not, create it
     const tableExists =
@@ -37,15 +32,26 @@ export const registerUser = async (req: Request, res: Response) => {
     if (tableExists.recordset.length === 0) {
       // Create users table if it doesn't exist
       await pool.query`CREATE TABLE users (id VARCHAR(40) PRIMARY KEY, fullName VARCHAR(255), email VARCHAR(255), phoneNumber VARCHAR(255), password VARCHAR(255))`;
+    } else {
+      const existingUser = await pool.query`SELECT * FROM users 
+      WHERE email = ${userData.email} OR phoneNumber = ${userData.phoneNumber} `;
+      
+      if ((existingUser.recordset.length > 0)) {
+        return res.status(201).json({
+          success: false,
+          message:
+            "User with the provided email or phone number already exists",
+        });
+      } else {
+        // Insert user data into the users table
+        await pool.query`INSERT INTO users (id, fullName, email, phoneNumber, password) VALUES (${id},${userData.fullName}, ${userData.email}, ${userData.phoneNumber}, ${hash_pwd})`;
+
+        // Send a success response
+        res
+          .status(201)
+          .json({ success: true, message: "User registered successfully" });
+      }
     }
-
-    // Insert user data into the users table
-    await pool.query`INSERT INTO users (id, fullName, email, phoneNumber, password) VALUES (${id},${userData.fullName}, ${userData.email}, ${userData.phoneNumber}, ${hash_pwd})`;
-
-    // Send a success response
-    res
-      .status(201)
-      .json({ success: true, message: "User registered successfully" });
   } catch (error) {
     console.error(error);
     // Send a failure response
@@ -62,16 +68,17 @@ export const loginUser = async (req: any, res: any) => {
 
     // Query the users table to find the user with the provided email and password
     const result =
-      await pool.query`SELECT * FROM users WHERE email = ${email} AND password = ${password}`;
+      (await pool.query`SELECT * FROM users WHERE email = ${email} AND password = ${password}`).recordset;
+console.log(result);
 
     // Check if a user with the provided credentials was found
-    if (result.recordset.length === 1) {
+    if (result.length === 1) {
       // User found, generate a JWT token
-      const token = generateToken(result.recordset[0].id); // Assuming id is the user's unique identifier in the database
-console.log(token);
+      const token = generateToken(result[0].id); // Assuming id is the user's unique identifier in the database
+      console.log(token);
 
       // Send a success response with the JWT token
-      res.status(200).json({ success: true, message: "Login successful", token });
+      res.status(200).json({ success: true, message: "Login successful" });
     } else {
       // User not found or credentials are incorrect, send an error response
       res
@@ -91,4 +98,3 @@ export const resetPassword = async (req: any, res: any) => {
 function uuidv4() {
   throw new Error("Function not implemented.");
 }
-
