@@ -53,23 +53,23 @@ li:hover {
   /* flex-direction: column; */
   flex-wrap: wrap;
   align-items: center;
+  gap: 20px;
   justify-content: center;
 }
 
 .cards {
   background-color: white;
   display: flex;
-  margin: 30px;
+  /* margin: 30px; */
   flex-direction: column;
   align-items: center;
-  width: 20vw;
-  padding: 20px;
+  justify-content: space-between;
+  max-width: 300px;
+  /* width: 20vw; */
+  padding: 10px;
   gap: 10px;
   border-radius: 20px;
-  width: 300px;
-  /* height: 450px; */
-  margin: 20px;
-  overflow: hidden;
+  height: max-content;
   position: relative;
   transition: transform 0.3s ease;
 }
@@ -78,7 +78,10 @@ li:hover {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .cards > img {
-  width: 18vw;
+  width: 250px;
+  object-fit: cover;
+  height: 250px;
+  border-radius: 5px;
 }
 .cards > p {
   font-size: 15px;

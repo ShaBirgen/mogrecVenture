@@ -10,6 +10,7 @@ interface TourData {
   Duration: string;
   Price: string;
   Image: string;
+  Description : string;
 }
 
 export const getAllTours = async (
@@ -56,6 +57,8 @@ export const getTourById = async (
 export const createTour = async (req: Request, res: Response) => {
   try {
     const tourData: TourData = req.body;
+    console.log(tourData);
+    
 
     // Generate a unique tour ID using UUID
     const tourId = v4();
@@ -65,8 +68,8 @@ export const createTour = async (req: Request, res: Response) => {
 
     // Verify pool connection
     if (pool.connected) {
-      const query = `INSERT INTO tours (tourId, Destination, Tour_type, Duration, Price, Image)
-         VALUES ('${tourId}', '${tourData.Destination}', '${tourData.Tour_type}', '${tourData.Duration}', '${tourData.Price}', '${tourData.Image}')`;
+      const query = `INSERT INTO tours (tourId, Destination, Tour_type, Duration, Price, Image, Description)
+         VALUES ('${tourId}', '${tourData.Destination}', '${tourData.Tour_type}', '${tourData.Duration}', '${tourData.Price}', '${tourData.Image}', '${tourData.Description}')`;
 
       let result = (
         await pool
@@ -77,6 +80,7 @@ export const createTour = async (req: Request, res: Response) => {
           .input("Duration", mssql.VarChar(255), tourData.Duration)
           .input("Price", mssql.VarChar(255), tourData.Price)
           .input("Image", mssql.VarChar(255), tourData.Image)
+          .input("Description", mssql.VarChar(8000), tourData.Description)
           .query(query)
       ).recordset;
       console.log("This is the result", result);
@@ -101,11 +105,12 @@ export const updateTour = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const tourId = req.params.id;
   try {
+    const tourId = req.params.id;
     const pool = await mssql.connect(mssqlDBConfig);
     const updatedTour = req.body;
-    await pool.query`UPDATE tours SET column1 = ${updatedTour.column1}, column2 = ${updatedTour.column2}, ... WHERE id = ${tourId}`;
+    await pool.query`UPDATE tours SET Destination = ${updatedTour.Destination}, Tour_type = ${updatedTour.Tour_type}, 
+    Duration = ${updatedTour.Duration}, Price = ${updatedTour.Price}, Image = ${updatedTour.Image}, Description = ${updatedTour.Description} WHERE tourId = ${tourId}`;
     res.status(200).json({ success: true, data: updatedTour });
   } catch (error) {
     res.status(500).json({ success: false, message: "Internal server error" });

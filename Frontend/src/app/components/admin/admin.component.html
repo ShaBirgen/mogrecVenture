@@ -1,12 +1,11 @@
-<app-admin-sidebar> </app-admin-sidebar>
-<div class="main">
-<nav>
-  <img src="../../../assets/Mogrec Ventures png-02.png" alt="company" />
+<!-- <app-navbar></app-navbar> -->
+<title>Mogrec Ventures | Admin Dashboard</title>
+<section class="dash-content">
+  <app-admin-sidebar></app-admin-sidebar>
+  <div class="dashboard">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
 
-  <div class="list">
-    <li routerLink="/tours">Users</li>
-    <li routerLink="/register">Tours</li>
-    <li routerLink="/login">New Events</li>
   </div>
-</nav>
-</div>
+</section>

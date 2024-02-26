@@ -6,8 +6,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
-import { ToursComponent } from './components/tours/tours.component';
 import { NewDestinationComponent } from './components/new-destination/new-destination.component';
+import { ToursComponent } from './components/tours/tours.component';
+import { AdminSidebarComponent } from './components/admin-sidebar/admin-sidebar.component';
 
 @Component({
   selector: 'app-root',
@@ -16,12 +17,11 @@ import { NewDestinationComponent } from './components/new-destination/new-destin
     CommonModule,
     RouterOutlet,
     LoginComponent,
-    RegisterComponent,
+    RegisterComponent, AdminSidebarComponent,
     LoginComponent,
     NavbarComponent,
     ProfileComponent,
-    HomeComponent,
-    ToursComponent, NewDestinationComponent
+    HomeComponent, NewDestinationComponent, ToursComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -4,16 +4,17 @@ POST http://localhost:3000/api/tours/createTour
 Content-Type: application/json
 
 {
-  "Destination": "Mount Kenya ",
-  "Tour_type": "Hiking",
-  "Duration": "3 Days",
-  "Price": "Kshs 15,000",
-  "Image": "https://i.pinimg.com/564x/ef/ed/4b/efed4b90925ce731a690449c89f221aa.jpg"
+  "Destination": "Seychelles ",
+  "Tour_type": "Weekend Gateway",
+  "Duration": "5 Days",
+  "Price": "Kshs 35,000",
+  "Image": "https://i.pinimg.com/236x/3b/87/09/3b870928b6d1422a763c09649ecea4cf.jpg",
+  "Description" : "Seychelles, an Indian Ocean archipelago of 115 islands, boasts stunning beaches, turquoise waters, and lush landscapes. Mahe hosts the capital, Victoria, while Praslin features the UNESCO-listed Vallée de Mai. Rich in biodiversity, it offers vibrant reefs, rare wildlife like the coco de mer, and a vibrant Creole culture blending diverse influences."
 }
 
 ###
 //GET TOUR BY ID
-GET http://localhost:3000/api/tours/tourId/1bfd1232-c5bc-4d6e-a473-56685fc8b289
+GET http://localhost:3000/api/tours/tourId/07550ec1-7286-4c3d-b064-9f4ac2025738
 Content-Type: application/json
 
 ###
@@ -24,20 +25,20 @@ Content-Type: application/json
 
 ###
 //DELETE TOURS
-DELETE  http://localhost:3000/api/tours/deleteTour/b791aab2-22f7-4efd-ae5b-2957d0f083bd
+DELETE  http://localhost:3000/api/tours/deleteTour/ee76d50d-ee4a-4f15-8cbf-f740fdd8b483
 Content-Type: application/json
 
 ###
 //UPDATE TOUR
-PUT http://localhost:3000/api/tours/updateTour/d8ea3307-8971-499b-b0ca-e5b7442996e4
+PUT http://localhost:3000/api/tours/updateTour/07550ec1-7286-4c3d-b064-9f4ac2025738
 Content-Type: application/json
 
 {
   "Destination": "Mount Kenya ",
-  "Tour_type": "Weekend Gateway",
-  "Duration": "3 Days",
-  "Price": "Kshs 15,000",
-  "Image": "https://i.pinimg.com/564x/ef/ed/4b/efed4b90925ce731a690449c89f221aa.jpg"
-
+  "Tour_type": "Cultural Excursions",
+  "Duration": "15 Days",
+  "Price": "Kshs 115,000",
+  "Image": "https://i.pinimg.com/564x/ef/ed/4b/efed4b90925ce731a690449c89f221aa.jpg" ,
+  "Description" : " Mount Kenya, Africa's second-highest peak at 5,199 meters, is an extinct volcano boasting rugged, snow-capped peaks and glaciers. Situated in central Kenya near the equator, it's a UNESCO World Heritage Site. Surrounding Mount Kenya National Park showcases diverse flora and fauna, attracting climbers with varied routes, stunning scenery, and high-altitude wilderness experiences." 
 }
 

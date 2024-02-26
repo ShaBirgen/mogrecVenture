@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { ToursComponent } from '../tours/tours.component';
 import { Router, RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -9,7 +9,7 @@ import { catchError, throwError } from 'rxjs';
 @Component({
   selector: 'app-new-destination',
   standalone: true,
-  imports: [ToursComponent, RouterLink, FormsModule],
+  imports: [ RouterLink, FormsModule, ToursComponent],
   templateUrl: './new-destination.component.html',
   styleUrl: './new-destination.component.css',
 })
