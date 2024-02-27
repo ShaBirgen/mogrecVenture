@@ -1,0 +1,60 @@
+<div class="main">
+  <nav>
+    <img src="../../../assets/Mogrec Ventures png-02.png" alt="company" />
+    <!-- <h1>Welcome to Mogrec Ventures</h1> -->
+
+    <div class="list">
+      <li routerLink="/tours">Tours</li>
+      <li routerLink="">Home</li>
+    </div>
+  </nav>
+
+  <!-- BOOKING A TRIP -->
+
+  <div class="Booking">
+    <form
+      class="form"
+      (ngSubmit)="createTour(createForm.value)"
+      #createForm="ngForm"
+    >
+      <!-- DESTINATION -->
+      <h1>New Tour</h1>
+      <div class="input-div">
+        <label for="destination">Destination :</label> <br />
+        <input type="text" name="Destination" ngModel required />
+      </div>
+
+      <!-- TOUR TYPE  -->
+      <div class="input-div">
+        <label for="tour_type">Tour_type :</label> <br />
+        <input type="text" name="Tour_type" ngModel required />
+      </div>
+
+      <!-- DURATION -->
+      <div class="input-div">
+        <label for="duration">Duration :</label> <br />
+        <input type="text" name="duration" ngModel required />
+      </div>
+
+      <!-- PRICE -->
+      <div class="input-div">
+        <label for="price">Price :</label> <br />
+        <input type="text" name="Price" ngModel required />
+      </div>
+
+      <!-- IMAGE -->
+      <div class="input-div">
+        <label for="image">Image :</label> <br />
+        <input type="text" name="Image" ngModel required />
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="input-div">
+        <label for="descripion">Description:</label> <br />
+        <input type="text" name="Description" ngModel required />
+      </div>
+      <!-- SUBMIT -->
+      <button type="submit" class="submit">Create Tour</button>
+    </form>
+  </div>
+</div>

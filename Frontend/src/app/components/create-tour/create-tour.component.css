@@ -1,0 +1,59 @@
+/* main {
+  border: 2px solid red;
+} */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+nav > img {
+  width: 10rem;
+}
+.list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.list > li {
+  background-color: orange;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.events {
+  /* border: 2px solid salmon; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+input {
+  padding: 10px;
+  width: 40vw;
+  border-radius: 5px;
+  border: none;
+  background-color: beige;
+}
+.submit {
+  width: 20vw;
+  margin-left: 130px;
+  border: none;
+  background-color: grey;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}
+.Booking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bookingForm > h2 {
+  align-items: center;
+  display: flex;
+}

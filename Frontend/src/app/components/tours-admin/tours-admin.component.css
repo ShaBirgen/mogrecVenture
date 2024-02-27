@@ -1,0 +1,119 @@
+/* .special-background {
+  background-image: url("../../../assets/pexels-birkaybolushikayesi-19283227.jpg");
+  background-size: cover;
+  height: max-content;
+} */
+
+.image > img {
+  width: 150px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+}
+.list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 50px;
+  font-size: 20px;
+}
+li {
+  /* border: 2px solid black; */
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  opacity: 70%;
+}
+li:hover {
+  background-color: rgb(19, 66, 19);
+  color: white;
+  text-decoration: underline;
+}
+.hike {
+  display: flex;
+  justify-content: center;
+  color: rgb(19, 66, 19);
+  font-size: 25px;
+  font-style: italic;
+  margin-left: 170px;
+  margin-right: 170px;
+  margin-bottom: 40px;
+  padding: 10px;
+  background-color: rgba(255, 165, 0, 0.7);
+}
+.hikes {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cards {
+  background-color: white;
+  display: flex;
+  /* margin: 30px; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 350px;
+  /* width: 20vw; */
+  padding: 20px;
+  gap: 10px;
+  border-radius: 20px;
+  height: 650px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgb(19, 66, 19);
+  color: white;
+  h1 {
+    color: white;
+  }
+}
+.cards > img {
+  width: 250px;
+  object-fit: cover;
+  height: 250px;
+  border-radius: 5px;
+}
+.cards > p {
+  font-size: 15px;
+  line-height: 24px;
+}
+.cards > h1 {
+  color: rgb(19, 66, 19);
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+.buttons > button {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+.update {
+  background-color: rgb(19, 66, 19);
+  color: white;
+}
+.update:hover {
+  background-color: rgb(19, 66, 19);
+  color: white;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+}

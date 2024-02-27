@@ -3,13 +3,6 @@
     <div class="image">
       <img src="../../../assets/Mogrec Ventures png-02.png" alt="company" />
     </div>
-
-    <div class="list">
-      <li routerLink="">Home</li>
-      <li routerLink="/newDestination">Booking</li>
-      <li routerLink="/register">Register</li>
-      <li routerLink="/login">Login</li>
-    </div>
   </nav>
 
   <div class="hike"><h1>TOURS</h1></div>
@@ -17,10 +10,12 @@
     <div class="cards" *ngFor="let tour of Tours; let i = index">
       <h1>{{ tour.Destination }}</h1>
       <img src="{{ tour.Image }}" alt="" />
-      <p> {{tour.Price}} </p>
+      <p>{{ tour.Price }}</p>
       <p>{{ tour.Description }}</p>
-      <button routerLink="/newDestination">BOOK NOW</button>
+      <div class="buttons">
+        <button class="update">UPDATE</button>
+        <button class="delete" (click)="deleteTour(tour.tourId)">DELETE</button>
+      </div>
     </div>
   </div>
-  
 </div>

@@ -10,6 +10,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WildcardComponent } from './components/wildcard/wildcard.component';
 import { ToursAdminComponent } from './components/tours-admin/tours-admin.component';
+import { CreateTourComponent } from './components/create-tour/create-tour.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'tours', component: ToursComponent },
   { path: 'newDestination', component: NewDestinationComponent },
   { path: 'admin', component: AdminComponent, children: [
+    { path: 'createTour', component: CreateTourComponent },
     { path: 'adminTour', component:ToursAdminComponent},
   ] },
   { path: 'admin-sidebar', component: AdminSidebarComponent },
